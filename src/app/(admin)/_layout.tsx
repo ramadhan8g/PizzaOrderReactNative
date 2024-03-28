@@ -16,9 +16,13 @@ export default function TabLayout() {
   const colorScheme = useColorScheme();
   return (
     <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-      }}
+    screenOptions={{
+      tabBarActiveTintColor: Colors.light.background,
+      tabBarInactiveTintColor: 'gainsboro',
+      tabBarStyle: {
+        backgroundColor: Colors.light.tint,
+      },
+    }}
     >
       <Tabs.Screen name="index" options={{ href: null }} />
 
@@ -37,6 +41,7 @@ export default function TabLayout() {
         name="two"
         options={{
           title: 'Orders',
+          // headerShown: false,
           tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
         }}
       />
