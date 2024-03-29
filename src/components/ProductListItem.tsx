@@ -15,6 +15,7 @@ const ProductListItem = ({ product }: ProductListItemProps) => {
   return (
     // asChild : utk mastikan yg d bawah itu anaknya, biar bsa tmpil d bawahny
     // <Link href={`/menu/${product.id}`} asChild>
+    // klo admin g muncul add product
     <Link href={`/${segments[0]}/menu/${product.id}`} asChild> 
         {/* pressable biar bsa d klik  */}
       <Pressable style={styles.container}>
