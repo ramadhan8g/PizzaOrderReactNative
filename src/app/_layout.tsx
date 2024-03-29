@@ -49,7 +49,7 @@ function RootLayoutNav() {
 
   const colorScheme = useColorScheme();
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
       <CartProvider>
         <Stack>
           <Stack.Screen name="(user)" options={{ headerShown: false }} />
